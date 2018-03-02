@@ -1,0 +1,21 @@
+package graficos;
+
+import javax.swing.*;
+
+public class CreandoMarcos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		miMarco marco1=new miMarco();//instancio la clase miMarco creando una objeto de esta clase llamado marco1
+		
+		marco1.setVisible(true);//con este metodo hacemos visible el objeto de tipo miMarco que hemos creado
+		//el metodo constructor ya se encarga de darle valores iniciales al objeto, en este caso configuramos el tamano de la ventan
+		//marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//en este metodo le indicamos que hacer cuando se cierre la ventana, la cual tiene varias operaciones
+		
+		System.exit(0);
+
+	}
+
+}
+

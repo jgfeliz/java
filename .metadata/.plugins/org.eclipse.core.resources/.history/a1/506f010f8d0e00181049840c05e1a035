@@ -1,0 +1,13 @@
+package graficos;
+
+import javax.swing.*;//importo paquete javax.swing
+
+public class miMarco extends JFrame{ //creo una clase publica llamada miMarco la cual hereda la clase JFrame
+	
+	public miMarco(){//metodo constructor
+		//los constructores le dan estado inicial a los objetos		
+		setSize(500,300);//aqui le establesco un tamano de 500x300 pixeles
+		setTitle("Este es un marco!");
+	}
+	
+}

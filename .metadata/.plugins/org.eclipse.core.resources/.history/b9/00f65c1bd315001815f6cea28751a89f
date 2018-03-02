@@ -1,0 +1,106 @@
+package graficos;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class PruebaEventos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MarcoBotones miMarco=new MarcoBotones();
+		miMarco.setVisible(true);
+		miMarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}
+
+}
+
+
+class MarcoBotones extends JFrame{
+	
+	public MarcoBotones(){
+		
+		setBounds(300,300,600,400);
+		
+		setTitle("Botones y Eventos..");
+		
+		Toolkit icono=Toolkit.getDefaultToolkit();
+		
+		Image Icono=icono.getImage("imagenes/icono.png");
+		
+		setIconImage(Icono);
+		
+		LaminaBotones milamina=new LaminaBotones();
+		
+		add(milamina);
+	}	
+	
+}
+
+class LaminaBotones extends JPanel implements ActionListener{//la lamina es quien recibira el evento
+	//por ende tiene que implementar la intefaz actionlistener
+	
+	JButton botonAzul=new JButton("Azul/Cyan...");//creamos un oabjeto de tipo jbutton de color azul
+	JButton botonNegro=new JButton("Negro");//creamos un oabjeto de tipo jbutton de color azul
+	JButton botonRojo=new JButton("Rojo");//creamos un oabjeto de tipo jbutton de color azul
+	JButton botonVerde=new JButton("Verde");//creamos un oabjeto de tipo jbutton de color azul
+	JButton botonGris=new JButton("Gris");//creamos un oabjeto de tipo jbutton de color azul
+	//JButton botonAzul=new JButton("Azul/Cyan...");//creamos un oabjeto de tipo jbutton de color azul
+	//JButton botonAzul=new JButton("Azul/Cyan...");//creamos un oabjeto de tipo jbutton de color azul
+	//JButton botonAzul=new JButton("Azul/Cyan...");//creamos un oabjeto de tipo jbutton de color azul
+	
+	
+	public LaminaBotones(){///metodo constructor de la lamina
+			
+		add(botonAzul);//agregamos el objeto de tipo jbutton
+		add(botonNegro);
+		add(botonRojo);
+		add(botonVerde);
+		add(botonGris);
+		
+		setBackground(Color.cyan);
+			
+		botonAzul.addActionListener(this);//utilizamos el metodo addactionlistener, 
+		//y entre parentesis indicamos el obgeto que tiene que estar a la escucha del 
+		//en esta linea estan los tres elementos que intervienen en el evento
+		//1er elemento actions, que es lo mismo que decirle: al hacer click
+		//2do elemento objeto que desencadena el evento: el boton azul, objeto fuente
+		//2er elemento listener, el oyente (this) que es el objeto que recibe el evento
+		
+		botonNegro.addActionListener(this);
+		botonRojo.addActionListener(this);
+		botonVerde.addActionListener(this);
+		botonGris.addActionListener(this);
+					
+	}
+		
+	public void actionPerformed(ActionEvent e){//creamos el metodo actionperformed, este metodo pertenece a la interfaz agregada
+		//que indica que es lo que se tiene que hacer cundo ocurra el evento
+		
+		Object botonPulsado=e.getSource();
+		
+		System.out.println(botonPulsado);
+		
+		Color fondo=this.getBackground();
+		
+		if(fondo == Color.cyan){
+		
+			System.out.println(fondo);
+			setBackground(Color.blue);//el evento como tal es cambier el color del background
+	
+		}
+		
+		else{
+			
+			System.out.println(fondo);
+			setBackground(Color.CYAN);
+		}
+	}
+		
+}
+	

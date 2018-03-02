@@ -1,0 +1,88 @@
+package graficos;
+
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.awt.*;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class EventosVentana {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		marco mimarco=new marco();//creo una instancia (objeto)de la clase marco
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//utilizo el metodo setdefaultcloseoperation que indica que debe hacer cuando cierre la ventana, en este caso le indico que cierre el marco
+		mimarco.setVisible(true);//con este metodo le indico que el marco es visible
+		mimarco.setTitle("Ventana 1...");//le coloso un titulo a la ventana
+		marco mimarco2=new marco();//creo un objeto de la clase marco
+		mimarco2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);//le imdico que al precionar x en este marco
+		mimarco2.setVisible(true);
+		mimarco2.setSize(300, 210);
+		mimarco2.setTitle("Ventana 2...");
+
+	}
+
+}
+
+class marco extends JFrame{
+	
+	public marco(){
+		
+		setBounds(400,400,600,400);
+		setTitle("Respondiendo...");
+		Toolkit miLogo=Toolkit.getDefaultToolkit();
+		Image logos=miLogo.getImage("imagenes/icono.png");
+		setIconImage(logos);
+		
+		M_Ventana oyente_ventana=new M_Ventana();
+		addWindowListener(oyente_ventana);
+		
+	}
+	
+	
+}
+
+class M_Ventana implements WindowListener{
+	
+	public void windowActivated(WindowEvent e){
+		
+		System.out.println(this + "Ventana Activa...");
+	}
+	
+	public void windowClosed(WindowEvent e){
+		
+		System.out.println(this + "Ventana Cerrada...");
+	}
+	
+	public void windowClosing(WindowEvent e){
+		
+		System.out.println(this + "Cerrando Ventana...");
+	}
+	
+	public void windowDeactivated(WindowEvent e){
+		
+		System.out.println(this + "Ventana Desactivada...");
+	}
+	
+	public void windowDeiconified(WindowEvent e){
+		
+		System.out.println(this + "Ventana Restaurada...");
+	}
+	
+	public void windowIconified(WindowEvent e){
+		
+		System.out.println(this + "Ventana Minimizada");
+	}
+	
+	public void windowOpened(WindowEvent e){
+		
+		System.out.println(this + "Ventana Activa...");
+	}
+	
+	
+	
+}

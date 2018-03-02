@@ -1,0 +1,6 @@
+git config --global user.name jgfeliz
+git config --global user.email felizlopez.josegabriel@gmail.com
+git config --global color.ui true
+git config --global --list
+git init #este comando inicia la escucha de git en el folder
+git status #nos indica 

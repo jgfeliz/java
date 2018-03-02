@@ -1,0 +1,47 @@
+package graficos;
+
+import java.awt.Toolkit;
+
+import javax.swing.*;
+
+import java.awt.*;
+
+public class CreandoMarcoCentrado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MarcoCentrado mimarco=new MarcoCentrado();
+		
+		mimarco.setVisible(true);//con este metodo hacemos visible el objeto de tipo miMarco que hemos creado
+		//el metodo constructor ya se encarga de darle valores iniciales al objeto, en este caso configuramos el tamano de la ventan
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//en este metodo le indicamos que hacer cuando se cierre la ventana, la cual tiene varias operaciones
+		
+		
+
+	}
+
+}
+
+class MarcoCentrado extends JFrame{
+	
+	public MarcoCentrado(){
+		
+		Toolkit mipantalla=Toolkit.getDefaultToolkit();
+		
+		Dimension tamanoPantalla=mipantalla.getScreenSize();
+		
+		int alturaPantalla=tamanoPantalla.height;
+		
+		int anchoPantalla=tamanoPantalla.width;
+		
+		setSize(alturaPantalla/2, anchoPantalla/2);
+		
+		setLocation(alturaPantalla/4, anchoPantalla/4);
+		
+		
+		
+	}
+	
+	
+}

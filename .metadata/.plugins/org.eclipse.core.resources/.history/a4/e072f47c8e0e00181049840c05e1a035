@@ -1,0 +1,17 @@
+package graficos;
+
+import javax.swing.*;//importo paquete javax.swing
+
+public class miMarco extends JFrame{ //creo una clase publica llamada miMarco la cual hereda la clase JFrame
+	
+	public miMarco(){//metodo constructor
+		//los constructores le dan estado inicial a los objetos		
+		//setSize(500,300);//en este metodo le establesco un tamano de 500x300 pixeles
+		//String tituloMarco=JOptionPane.showInputDialog("ingresa el titulo que quieres que tenga el marco de la ventana");//creo una ventata que me pide el titulo del marco
+		//setTitle(tituloMarco); //con este metodo se le asigna un titulo al marco, en este caso tendra el valor de la variable colocada
+		setTitle("titulo del marco");
+		//setLocation(500,300);//con este metodo le asignamos la posicion en la cual se debe abrir el marco, se utilizan coordenadas de eje cartesino
+		setBounds(500,300,500,250,250);
+	}
+	
+}

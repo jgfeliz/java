@@ -1,0 +1,29 @@
+package graficos;
+
+import javax.swing.*;
+
+import java.awt.*;
+
+public class PruebaDibujo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MarcoConDibujos mimarco=new MarcoConDibujos();
+		
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//este metodo indica que hacer cuando cerramos el marco
+		
+
+	}
+
+}
+
+class MarcoConDibujos extends JFrame{
+	
+	public MarcoConDibujos(){
+		
+		setTitle("prueba de Dibujo");
+		
+		setSize(400,400);
+	}
+}

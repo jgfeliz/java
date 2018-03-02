@@ -1,0 +1,41 @@
+package graficos;
+
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class EventosVentana {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		marco mimarco=new marco();
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mimarco.setVisible(true);
+
+	}
+
+}
+
+class marco extends JFrame{
+	
+	public marco(){
+		
+		setBounds(400,400,400,400);
+		Toolkit miLogo=Toolkit.getDefaultToolkit();
+		Image logos=miLogo.getImage("imagenes/icono.png");
+		setIconImage(logos);
+				
+		
+	}
+	
+	
+}
+
+class lamina extends JPanel{
+	
+	
+	
+}

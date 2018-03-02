@@ -1,0 +1,44 @@
+package graficos;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.*;
+
+public class PruebaEventos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+class MarcoBotones extends JFrame{
+	
+	public MarcoBotones(){
+		
+		setVisible(true);
+		setBounds(100,100,100,100);
+		
+		
+	}
+	
+	
+}
+
+class LaminaBotones extends JPanel{
+	
+	public void paintComponent(Graphics g){
+		
+		super.paintComponent(g);
+		
+		Toolkit pantalla=Toolkit.getDefaultToolkit();
+		
+		Icono=pantalla.getImage("imagenes/icono.png");
+		
+		
+	}
+	private Image Icono;
+}
