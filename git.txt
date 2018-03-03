@@ -1,6 +1,25 @@
-git config --global user.name jgfeliz
-git config --global user.email felizlopez.josegabriel@gmail.com
-git config --global color.ui true
-git config --global --list
+git config --global user.name #especificamos el usuario
+git config --global user.email #especificamos el email
+git config --global color.ui true #configuramos los colores de git
+git config --global --list #muestra todo lo que se ha configurado
 git init #este comando inicia la escucha de git en el folder
-git status #nos indica 
+git status #nos indica los ficheros que han sido agregados o no
+git add <nombre de archivo> #agregamos los archivos
+git add -A #nos agrega todos los archivos que se han modificado
+git commit -m "mensaje del commit" #creamos un commits, o sea una version del software, un punto de restauracion o checkpoint
+git log #nos muestra todos los commits
+git checkout <checksum del commit> #viaje en el tiempo hacia ese commit
+git checkout master #nos mueve hacia el ultimo commit
+git reset --soft <checksum del commit> #nos borra un commits, pero no borra codigo
+git reset --hard <checksum del commit> #nos borra los commits posteriores definitivamente y nos traslada a ese commit
+git help #nos muestra la ayuda de git
+git branch <nueva rama> #nos crea una nueva rama, o sea otra linea de tiempo pero con los commits de la rama donde nos econtramos
+git checkout <nombre del branch> #cambiamos de una rama a otra
+git branch #nos lista las ramas actuales y en la que estamos trabajando
+git merge <nombre del banch> #nos junta el branch nombrado con el branch donde nos encontramos
+git branch -D <nombre del branch> #elimina un branch por completo
+git remote add origin <url de git> #enlaza nuestro proyecto con el de github
+git remote -v #nos lista los repositorios remotos
+git remote remove origin #desligamos los repositorios
+git push origin <nombre del branch> #pasamos el branch al repositorio al que estamos sincronizado
+
