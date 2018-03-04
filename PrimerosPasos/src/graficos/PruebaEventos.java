@@ -44,15 +44,15 @@ class MarcoBotones extends JFrame{
 
 class LaminaBotones extends JPanel {
 	
-	JButton botonAzul=new JButton("Azul");//creamos un oabjeto de tipo jbutton de color azul
-	JButton botonNegro=new JButton("Negro");//creamos un oabjeto de tipo jbutton de color azul
-	JButton botonRojo=new JButton("Rojo");//creamos un oabjeto de tipo jbutton de color azul
-	JButton botonVerde=new JButton("Verde");//creamos un oabjeto de tipo jbutton de color azul
-	JButton botonGris=new JButton("Gris");//creamos un oabjeto de tipo jbutton de color azul
+	JButton botonAzul=new JButton("Azul");//creamos un objeto de tipo jbutton con texto azul
+	JButton botonNegro=new JButton("Negro");//creamos un objeto de tipo jbutton con texto negro
+	JButton botonRojo=new JButton("Rojo");//creamos un objeto de tipo jbutton con texto rojo
+	JButton botonVerde=new JButton("Verde");//creamos un objeto de tipo jbutton con texto verde
+	JButton botonGris=new JButton("Gris");//creamos un objeto de tipo jbutton con texto gris
 		
 	public LaminaBotones(){///metodo constructor de la lamina
 			
-		add(botonAzul);//agregamos el objeto de tipo jbutton
+		add(botonAzul);//agregamos el objeto de tipo jbutton al metodo constructor de la lamina
 		add(botonNegro);
 		add(botonRojo);
 		add(botonVerde);

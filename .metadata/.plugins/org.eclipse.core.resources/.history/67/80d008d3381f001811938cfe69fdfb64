@@ -1,0 +1,43 @@
+package graficos;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class EventosTeclado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MarcoConTeclas ventana1=new MarcoConTeclas();
+		
+		ventana1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		ventana1.setVisible(true);
+		
+		ventana1.setBackground(Color.DARK_GRAY);
+
+	}
+
+}
+
+
+class MarcoConTeclas extends JFrame {
+	
+	public MarcoConTeclas(){
+		
+		setBounds(400,400,600,400);
+		setTitle("Titulo del Frame");
+		
+		
+	}
+}
+
+class LaminaTeclado extends JPanel{
+	
+	public LaminaTeclado(){
+		
+		
+	}	
+}

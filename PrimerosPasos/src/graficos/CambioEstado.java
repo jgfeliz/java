@@ -48,7 +48,7 @@ class CambiaEstado implements WindowStateListener{//creo una clase que implement
 			System.out.println("La ventana se ha Maximizado...");
 		}else if(e.getNewState()==Frame.NORMAL){
 			
-			System.out.println("La ventana esta normal...");			
+			System.out.println("La ventana esta normal...");
 		}else if(e.getNewState()==Frame.ICONIFIED){
 			
 			System.out.println("La ventana esta Minimizada...");

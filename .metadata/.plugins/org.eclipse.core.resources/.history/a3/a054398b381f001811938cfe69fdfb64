@@ -1,0 +1,30 @@
+package graficos;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class EventosTeclado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+class MarcoConTeclas extends JFrame {
+	
+	public MarcoConTeclas(){
+		
+		
+	}
+}
+
+class LaminaTeclado extends JPanel{
+	
+	public LaminaTeclado(){
+		
+		
+	}	
+}
