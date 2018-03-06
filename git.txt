@@ -22,4 +22,4 @@ git remote add origin <url de git> #enlaza nuestro proyecto con el de github
 git remote -v #nos lista los repositorios remotos
 git remote remove origin #desligamos los repositorios
 git push origin <nombre del branch> #pasamos el branch al repositorio al que estamos sincronizado
-
+una linea mas
