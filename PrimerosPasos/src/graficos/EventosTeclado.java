@@ -49,29 +49,30 @@ class LaminaTeclado extends JPanel{
 	}	
 }
 
-class EventoDeTeclado implements KeyListener{
+class EventoDeTeclado implements KeyListener{//creo una clase que implementa la intefaz KeyListener
+	//por lo tanto tengo que sobreescribir todos los metodos de esta interfaz
 
 	@Override
-	public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent e) {//este metodo se inicia cuando presionamos una tecla del teclado
 		// TODO Auto-generated method stub
 		
-		int codigo = e.getKeyCode();
+		int codigo = e.getKeyCode();//con el metodo getkeycode de la clase keyevent obtenemos la tecla presionada
 		System.out.println(codigo);
 		
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(KeyEvent e) {//este metodo se inicia cuando una tecla del teclado es liberada
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void keyTyped(KeyEvent e) {
+	public void keyTyped(KeyEvent e) {//este metodo se inicia cuando una tecla del teclado es precionada y liberada
 		// TODO Auto-generated method stub
 		
-		//char letra=e.getKeyChar();
-		//System.out.println(letra);
+		char letra=e.getKeyChar();//el metodo getkeychar nos entrega la letra presionada en el teclado
+		System.out.println(letra);
 		
 	}
 
