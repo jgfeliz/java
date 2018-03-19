@@ -1,0 +1,52 @@
+package graficos;
+
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
+
+import javax.swing.JFrame;
+
+public class FocoVentana extends JFrame implements WindowFocusListener{//en la misma clase heredo la clase jframe e implemento la interfaz windowsfocuslistener
+	//con esto se busca realizar todo en una sola clase
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		FocoVentana miv = new FocoVentana();//dentro del metodo main instancio e inicio con el unico metodo creado
+		miv.iniciar();//como se puede ver en este metodo se crea desarolla todo el programa
+
+	}
+	
+	public void iniciar(){//unico metodo
+		
+		FocoVentana marco1 =new FocoVentana();//instancia de la clase que hereda de JFrame
+		FocoVentana marco2 =new FocoVentana();//instancia de la clase que hereda de JFrame
+		
+		marco1.setVisible(true);//metodo para que el marco sea visible
+		marco2.setVisible(true);//metodo para que el marco sea visible
+		
+		marco1.setBounds(300,100,600,350);//le aplico unas dimenciones y uvicacion a los marcos
+		marco2.setBounds(1200,100,600,350);//le aplico unas dimenciones y uvicacion a los marcos
+		
+		marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//con este metodo le indico que tiene que hacer cuando se cierra el marco
+		marco2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//con este metodo le indico que tiene que hacer cuando se cierra el marco
+	}
+
+	@Override
+	public void windowGainedFocus(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+		
+	}
+
+	@Override
+	public void windowLostFocus(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+	//FocoVentana marco1;
+	//FocoVentana marco2;
+
+}

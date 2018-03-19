@@ -1,0 +1,127 @@
+package graficos;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.*;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class FocoEvento {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		MarcoFoco focoventana=new MarcoFoco();
+		focoventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		focoventana.setVisible(true);
+	}
+
+}
+
+
+class MarcoFoco extends JFrame{
+	
+	public MarcoFoco(){//creo el metodo constructor del marco para darle un estado inicial
+		
+		setBounds(400,400,600,400);//le doy unas dimenciones y una poscicion de origen
+		setTitle("Titulos del marco...");//le doy un titulo al marco
+		Toolkit icono4=Toolkit.getDefaultToolkit();//creo un objeto de tipo toolkit con la intencion de almacenar en el una imagen
+		Image logo4=icono4.getImage("imagenes/icono.png");
+		setIconImage(logo4);
+		add(new LaminaFoco());//instanciacion dentro de argumento necesario
+		
+	}
+}
+
+class LaminaFoco extends JPanel{
+	
+	public void paintComponent(Graphics g){
+		
+		super.paintComponent(g);
+		
+		setLayout(null);//desabilitamod el layou, con esto conseguimos 
+		//colocar los elementos en la lamina donde nosotros queramos y no donde java lo defina
+		//o sea que deshabilitamos el layout
+		
+		cuadro1=new JTextField();//instancia del metodo jtextfield, o sea un cuadeo de texto
+		cuadro2=new JTextField();//instancia del metodo jtextfield, o sea un cuadro de texto
+		
+		cuadro1.setBounds(120,10,150,20);
+		cuadro2.setBounds(120,50,150,20);
+		
+		add(cuadro1);//agrego el obgeto de tipo jtextfiel
+		add(cuadro2);
+		
+		LanzaFocos elFoco=new LanzaFocos();
+		
+		cuadro1.addFocusListener(elFoco);
+		
+	}
+	
+	private class LanzaFocos implements FocusListener{//esta interfas se mantiene verificando si un objeto gana o pierde el foco
+		//clase oyente, ademas esta clase la hacemos interna del panel para que pueda aceder a los cuadros de texto
+
+		@Override
+		public void focusGained(FocusEvent arg0) {
+			// TODO Auto-generated method stub
+			
+						
+		}
+
+		@Override
+		public void focusLost(FocusEvent arg0) {
+			// TODO Auto-generated method stub
+			
+			//System.out.println("He perdido el foco");
+			
+			String email = cuadro1.getText();
+			
+			int arroba=0;
+			
+			boolean punto=false;
+
+			//String email=JOptionPane.showInputDialog("Introduce el email ");
+			
+			for(int i=0; i<email.length(); i++){
+				
+				String letra;
+				
+				letra = email;
+				
+				if(letra.charAt(i)=='@'){
+					
+				 	arroba++;
+				}
+				
+				if(letra.charAt(i)=='.'){
+					
+					punto=true;
+			
+				}
+				
+			}
+			
+			if(arroba==1 && punto==true){
+				
+				System.out.println("El email es valido");
+			}
+			
+			else{
+				
+				System.out.println("El email: " + email + " es invalido");
+			}
+			
+		
+			
+		}
+		
+		
+	}
+	
+	JTextField cuadro1;//estas variable las declaro fuera del metodo paintcomponent para que el alcance no sea local y poder aceder a ella desde fuera del metodo
+	JTextField cuadro2;//estas variable las declaro fuera del metodo paintcomponent para que el alcance no sea local y poder aceder a ella desde fuera del metodo
+}
+
